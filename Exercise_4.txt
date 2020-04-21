@@ -1,0 +1,48 @@
+Exercise 4:
+
+CLAIM:
+"It can be proved that the choice of Δv which minimizes ∇C⋅Δv is Δv=−η∇C,
+where η=ϵ/‖∇C‖ is determined by the size constraint ‖Δv‖=ϵ. So gradient descent
+can be viewed as a way of taking small steps in the direction which does the
+most to immediately decrease C."
+
+rephrase:
+  Δv=−η∇C, where η=ϵ/‖∇C‖
+  so Δv=−ϵ∇C/‖∇C‖,
+  we now need to prove that Δv=−ϵ∇C/‖∇C‖
+
+
+PROOF:
+1.
+Recall Cauchy-Schwarz:
+  |u · v| ≤ ‖u‖‖v‖ (for our case, -|u · v| ≥ -‖u‖‖v‖ )
+
+
+2.
+Given: |Δv| = ϵ
+
+3.
+By Cauchy-Schwarz, we know |∇C · Δv| ≤ ‖∇C‖‖Δv‖,
+therefore the max of ∇C · Δv = ‖∇C‖‖Δv‖
+
+(Recall that we are using -|u · v| ≥ -‖u‖‖v‖ as the identity for Cauchy-Schwarz)
+to minimize this, simply multiply each side of the equation by -1 so
+the min of ∇C · Δv = - ‖∇C‖‖Δv‖
+
+
+4.
+Substitute ϵ for ‖Δv‖ (from 2.):
+  min of ∇C · Δv = -‖∇C‖ϵ = -ϵ‖∇C‖
+
+To finish this proof, we need to show ∇C · Δv = ∇C · −ϵ∇C/‖∇C‖
+
+5.
+ Since ∇C · ∇C = ‖∇C‖^2 then, (∇C · ∇C)/‖∇C‖ = ‖∇C‖.
+ multiply each side of this equality by -ϵ:
+ -ϵ(∇C · ∇C)/‖∇C‖ = -ϵ‖∇C‖.
+
+so       ∇C · (-ϵ∇C/‖∇C‖) = -ϵ‖∇C‖
+from 4.                     -ϵ‖∇C‖ = ∇C · Δv
+Thus, Δv=−ϵ∇C/‖∇C‖.
+
+□

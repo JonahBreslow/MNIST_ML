@@ -1,3 +1,7 @@
+'''
+Exercise 3: Finding weights for binary neurons
+'''
+
 import numpy as np
 
 '''
@@ -21,7 +25,10 @@ def new_representation(activation_vector):
 
 '''
 Defining the function that applies the sigmoid "Squishification" function
-to the w.x + b vectors
+to the w.x + b vectors.
+
+Setting the "Activation" value to be 0.99 (i.e., the sigmoid Squishification
+has to return >.99 to "light up" the node, or bit)
 '''
 def new_repr_binary_vec(new_representation_vec):
     sigmoid_op = np.apply_along_axis(sigmoid, 0, new_representation_vec)
