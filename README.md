@@ -1,5 +1,5 @@
 # MNIST_ML
-An exploration of Michael Neilsen's Machine/Deep Learning book. Contains python scripts and proofs in text files. 
+An exploration of Michael Neilsen's Machine/Deep Learning book. Contains python scripts and proofs for the exercises in his book. 
 
 Prerequisites:
 - Basic python programming skills (OR proficiency in google / Stackoverflow). 
